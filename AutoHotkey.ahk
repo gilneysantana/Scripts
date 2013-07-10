@@ -28,6 +28,15 @@ SetTitleMatchMode, RegEx
 WinActivate, .*Mozilla Firefox
 return
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+^!n::
+IfWinExist Untitled - Notepad
+	WinActivate
+else
+	Run gvim
+return
+
 ;;;;;;;;;;
 
 ^!m:: Send {0}
