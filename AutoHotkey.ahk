@@ -11,21 +11,31 @@ Pause::Media_Play_Pause
 
 ;;; Abrir google translator no browser ;;;
 
-#g::
+^!g::
 Send ^c
 Run http://translate.google.com/\#en|pt|%Clipboard%
 Return
 
 ;;; FOCANDO JANELAS ABERTAS ;;;
 
-^!v::
+#v::
 SetTitleMatchMode, RegEx
 WinActivate, .*Visual Studio
 return
 
-^!f::
+#f::
 SetTitleMatchMode, RegEx
 WinActivate, .*Mozilla Firefox
+return
+
+#c::
+SetTitleMatchMode, RegEx
+WinActivate, .*cmd.exe
+return
+
+#g::
+SetTitleMatchMode, RegEx
+WinActivate, .*GVIM
 return
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
