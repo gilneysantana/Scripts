@@ -1,6 +1,10 @@
 +Capslock::Capslock
 Capslock::^[
-;; ç::Shift
+
+
+; Hack para eclipse
+#ifWinActive Java
+Capslock::Esc
 
 ;;;;;;;;;;;;;;;
 
